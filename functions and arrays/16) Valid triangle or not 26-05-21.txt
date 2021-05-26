@@ -1,0 +1,46 @@
+Valid triangle or not (Codechef)
+
+You're given the length of three sides a, b, and c respectively. Now check if these three sides can form a triangle or not. Print "YES"(without quotes) if it can form a valid triangle with an area greater than 0, otherwise print "NO" (without quotes).
+
+Input:
+First-line will contain three numbers a, b, and c separated by space.
+Output:
+Print "YES"(without quotes) if these sides can form a valid triangle, otherwise print "NO" (without quotes).
+
+Constraints
+1≤a,b,c≤106
+Sample Input 1:
+2 4 3
+Sample Output 1:
+YES
+Sample Input 2:
+1 1 4
+Sample Output 2:
+NO
+EXPLANATION:
+In the first example, (2, 4, 3) can form a triangle with an area greater than 0.
+In the second example, (1, 1, 4) will never form a valid triangle.
+
+CODE:
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		int b=sc.nextInt();
+		int c=sc.nextInt();
+		if((a+b>c) && (b+c>a) && (a+c>b)){
+		    System.out.println("YES");
+		}
+		else
+		System.out.println("NO");
+	}
+}
